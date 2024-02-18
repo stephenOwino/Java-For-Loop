@@ -27,6 +27,7 @@ public class Main {
         //How would you format the for loop above to do the same thing
         //but to start from 8% and work back to 2%?
         for (int i = 8; i >= 2; i--) {
+            //instead of using "printf", we can use string.format method to convert the number to two decimal places
             System.out.println("10,000 at " + i + " % interest " + calculateInterest(10000.00, 1));
         }
         //create a for statement using any range of numbers
@@ -45,6 +46,7 @@ public class Main {
                 System.out.println("number " + i + " is a prime number");
                 if (count == 10){
                     System.out.println("Exiting for loop");
+                    //we use break keyword to exit from a loop
                     break;
                 }
             }
@@ -52,15 +54,21 @@ public class Main {
 
     }
     public static double calculateInterest(double amount ,double interestRate){
+        //how to get interest
         return (amount * (interestRate/100));
 
     }
     //create a method and generate prime numbers using for loop
     private static boolean isPrime(int num){
+        //prime number should be greater than one.
+        //one is not a prime number
         if (num == 1){
             return false;
         }
+        //i <= num / 2. It checks for divisibility of num
+        //if num will be divisible by 2,it will return false else true
         for (int i = 2; i <= num/2; i ++){
+            //checking for even
             if (num % i ==0){
                 return false;
             }
