@@ -20,7 +20,7 @@ public class Main {
 
         for (int i = 2; i <= 8; i++){
             double interest = calculateInterest(10000.00,i);
-            System.out.printf("%.2f",interest);
+            System.out.printf("%.2f%n",interest);
 
         }
 
