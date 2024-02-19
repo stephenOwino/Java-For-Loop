@@ -30,6 +30,7 @@ public class Main {
             //instead of using "printf", we can use string.format method to convert the number to two decimal places
             System.out.println("10,000 at " + i + " % interest " + calculateInterest(10000.00, 1));
         }
+        System.out.println("**********************TESTING PRIME NUMBERS************************************************");
         //create a for statement using any range of numbers
         //Determine if the number is prime using the is prime method
         //if it is a prime number, print it out and increment a count of the
@@ -50,8 +51,38 @@ public class Main {
                     break;
                 }
             }
-        }
 
+        }
+        System.out.println("**********************************************************************");
+        /*
+        create a for statement using a range of numbers from 1 to 1000 inclusive
+        sum all the numbers that can be divided with both 3 and also 5
+        for those numbers that met the above conditions,print out the number
+        break out of the loop once you find 5 numbers that met the above conditions
+        After breaking out of the loop , print the sum of the numbers that met the above conditions
+        NOTE:TYPE ALL CODE IN MAIN METHOD
+
+        */
+        System.out.println("Numbers divisible by both 3 and 5 are :");
+        int length = 0;
+        int sumOfAllNumbers = 0;
+        for (int i = 1; i <=  1000; i++){
+            if ((i % 3 == 0) && (i % 5 ==0)){
+                length++;
+                System.out.println("found number " + i);
+
+                sumOfAllNumbers += i;
+
+                if (length == 5){
+                    System.out.println("Everything works pretty fine!");
+                    break;
+                }
+
+            }
+
+        }
+        System.out.println("SUMOFALLTHENUMBERS = " + sumOfAllNumbers);
+        System.out.println("*********************************************************************************************");
     }
     public static double calculateInterest(double amount ,double interestRate){
         //how to get interest
